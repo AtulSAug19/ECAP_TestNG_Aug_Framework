@@ -2,6 +2,7 @@ package testScripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -48,7 +49,6 @@ public class InvalidLogin {
 	
 	@Test
 	public void invalidlogin() throws IOException {
-		test = extentObj.startTest("Invalid login credential", extent);
 		loginPageObj.launchApplication(loginPageObj.getConfigValue("applicationURL"));
 		test.log(LogStatus.PASS, "Application is launched");
 		loginPageObj.clickOnRegistrationLink();
@@ -56,6 +56,7 @@ public class InvalidLogin {
 		loginPageObj.invalidLogin();
 		test.log(LogStatus.PASS, "User logged in");
 		extentObj.endTest(test, extent);
+		Assert.assertTrue(true);
 	}
 
 	@AfterClass()

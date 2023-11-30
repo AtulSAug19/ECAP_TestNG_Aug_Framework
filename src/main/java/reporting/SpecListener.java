@@ -3,7 +3,7 @@ package reporting;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listener implements ITestListener {
+public class SpecListener implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {

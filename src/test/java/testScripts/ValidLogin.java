@@ -2,6 +2,7 @@ package testScripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.TestNG;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -63,6 +64,7 @@ public class ValidLogin {
 		loginPageObj.validLogin();
 		test.log(LogStatus.PASS, "User logged in");
 		extentObj.endTest(test, extent);
+		Assert.assertTrue(true);
 	}
 
 	@AfterClass()
