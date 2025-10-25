@@ -4,7 +4,6 @@
 <listeners>
 <listener class-name="reporting.SpecListener" />
 </listeners>
-  
   <test thread-count="5" name="Test">
     <classes>
       <class name="testScripts.InvalidLogin"/>
